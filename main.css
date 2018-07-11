@@ -1,12 +1,9 @@
 /* test colors for boxes to move positioning */
-body{
-    justify-content: center;
-    align-content: center;
-}
 
 .header {
     background-color: gray;
     border: 2px solid black;
+    display: grid;
 
 }
 
@@ -17,12 +14,12 @@ body{
 }
 
 .canvas {
-    background-color: blanchedalmond;
-    border: 5px solid purple;
     display: grid;
-    grid-template-rows:    repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
     margin: 10%;
+    align-content: center;
+    justify-content: center;
 }
 
 article {
@@ -38,6 +35,8 @@ article {
     height: 200px;
     width: 200px;
     border-radius: 50%;
+    align-content: center;
+    justify-content: center;
 
 }
 
@@ -49,6 +48,8 @@ article {
     height: 200px;
     width: 200px;
     border-radius: 50%;
+    align-content: center;
+    justify-content: center;
 }
 
 .test3 {
@@ -59,6 +60,8 @@ article {
     height: 200px;
     width: 200px;
     border-radius: 50%;
+    align-content: center;
+    justify-content: center;
 }
 
 .test4 {
@@ -69,4 +72,6 @@ article {
     height: 200px;
     width: 200px;
     border-radius: 50%;
+    align-content: center;
+    justify-content: center;
 }

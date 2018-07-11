@@ -1,1 +1,1 @@
-var start = 
+let startButton = document.querySelector('#startbutton')
