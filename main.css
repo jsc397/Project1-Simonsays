@@ -1,4 +1,9 @@
 /* test colors for boxes to move positioning */
+body{
+    justify-content: center;
+    align-content: center;
+}
+
 .header {
     background-color: gray;
     border: 2px solid black;
@@ -6,6 +11,7 @@
 }
 
 .button{
+    display: inline-flex;
     background-color: orange;
     border: 2px solid black;
 }
@@ -14,12 +20,8 @@
     background-color: blanchedalmond;
     border: 5px solid purple;
     display: grid;
-    height: 30%;
-    width: 30%;
     grid-template-rows:    repeat(3, 100px);
     grid-template-columns: repeat(3, 1fr);
-    
-    
 }
 
 article {
