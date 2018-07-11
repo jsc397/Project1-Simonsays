@@ -20,8 +20,9 @@ body{
     background-color: blanchedalmond;
     border: 5px solid purple;
     display: grid;
-    grid-template-rows:    repeat(3, 100px);
+    grid-template-rows:    repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
+    margin: 10%;
 }
 
 article {
@@ -34,6 +35,10 @@ article {
     border: 2px solid black;
     grid-column: 2;
     grid-row:1;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+
 }
 
 .test2 {
@@ -41,6 +46,9 @@ article {
     border: 2px solid black;
     grid-column: 1;
     grid-row: 2;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
 }
 
 .test3 {
@@ -48,12 +56,17 @@ article {
     border: 2px solid black;
     grid-column: 3;
     grid-row: 2;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
 }
 
 .test4 {
     background-color:blue;
     border: 2px solid black;
-
     grid-column: 2;
     grid-row: 3;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
 }
