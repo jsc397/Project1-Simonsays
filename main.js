@@ -10,26 +10,29 @@ let resetButton = document.querySelector('.reset')
 // click events
 // startButton.addEventListener('click', startGame)
 // on click, you need start game, which is generate random array, but also light up the buttons to show user
-redCircle.addEventListener('click', function () {alert('red Button clicked')})
-yellowCircle.addEventListener('click', function () {alert('yellow Button clicked')})
-greenCircle.addEventListener('click', function () { alert('green Button clicked')})
-blueCircle.addEventListener('click', function () { alert('blue Button clicked')})
+redCircle.addEventListener('click', buttonClick)
+yellowCircle.addEventListener('click', buttonClick)
+greenCircle.addEventListener('click', buttonClick)
+blueCircle.addEventListener('click', buttonClick)
 resetButton.addEventListener('click', function () { alert('reset Button clicked') })
 
 // functions
 // To start game, push Start button to generate random sequence and light up circles
-// var answerArray = [];
-// let possibleColorArray = ["red", "yellow", "green", "blue"];
+var answerArray = [];
+let possibleColorArray = ["red", "yellow", "green", "blue"];
 
-// function startGame ()
-// {   for (i = 0; i < possibleColorArray.length; i++) {
-//     answerArray.push(possibleColorArray[Math.floor(Math.random() * possibleColorArray.length)];
-//     conole.log(answerArray)
-//     )}
-// }
-// startButton.addEventListener('click', startGame)
+function startGame () {
+     for (i = 0; i < possibleColorArray.length; i++) {
+    answerArray.push(possibleColorArray[Math.floor(Math.random() * possibleColorArray.length)]
+    )}
+}
+
+// function for buttonClick
+var userClickArry [];
+function buttonClick () {
 
 
+}
 /*
 // when you click the startButton it starts the game
 // COMPUTER DOES:
