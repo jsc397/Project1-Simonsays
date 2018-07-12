@@ -1,18 +1,23 @@
 /* test colors for boxes to move positioning */
-
+/* first section */
 .header {
     background-color: gray;
     border: 2px solid black;
     display: grid;
 
 }
+article {
+    background-color: aquamarine;
+    border: 2px solid black;
+}
 
+/* possible nav bar with start and score */
 .button{
     display: inline-flex;
     background-color: orange;
     border: 2px solid black;
 }
-
+/* game area with board and buttons */
 .canvas {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -22,9 +27,13 @@
     justify-content: center;
 }
 
-article {
-    background-color: aquamarine;
-    border: 2px solid black;
+.circle{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    align-content: center;
+    justify-content: center;
+
 }
 
 .test1 {
@@ -32,11 +41,8 @@ article {
     border: 2px solid black;
     grid-column: 2;
     grid-row:1;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    align-content: center;
-    justify-content: center;
+    margin: 0 auto;
+   
 
 }
 
@@ -45,11 +51,8 @@ article {
     border: 2px solid black;
     grid-column: 1;
     grid-row: 2;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    align-content: center;
-    justify-content: center;
+    margin: 0 auto;
+
 }
 
 .test3 {
@@ -57,11 +60,8 @@ article {
     border: 2px solid black;
     grid-column: 3;
     grid-row: 2;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    align-content: center;
-    justify-content: center;
+    margin: 0 auto;
+
 }
 
 .test4 {
@@ -69,9 +69,6 @@ article {
     border: 2px solid black;
     grid-column: 2;
     grid-row: 3;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    align-content: center;
-    justify-content: center;
+    margin: 0 auto;
+
 }
