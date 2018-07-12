@@ -1,5 +1,11 @@
 /* test colors for boxes to move positioning */
 /* first section */
+body {
+    background-image: url(https://media.giphy.com/media/3oKIPaGG4PDQgQDFZe/giphy.gif);
+    background-position: center;
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+}
 .header {
     background-color: gray;
     border: 2px solid black;
