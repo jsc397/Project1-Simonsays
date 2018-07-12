@@ -28,12 +28,12 @@ let answerArray = [];
 let possibleColorArray = ["red", "yellow", "green", "blue"];
 for (i = 0; i < possibleColorArray.length; i++) {
     // var rand = myArray[Math.floor(Math.random() * myArray.length)];
-    answerArray += possibleColorArray[Math.floor(Math.random() * possibleColorArray.length )]
-    
-//    answerArray += possibleColorArray(Math.floor(Math.random() * possibleColorArray.length))
-   //return answerArray;
-};
+    answerArray.push(possibleColorArray[Math.floor(Math.random() * possibleColorArray.length)]
 
+    //    answerArray += possibleColorArray(Math.floor(Math.random() * possibleColorArray.length))
+        //return answerArray;
+    )
+};
 // put the answers for the random array into answer array
 // then have another variable called userInput and store the user's clicked array into userInput array.
 // then check if answer array is equal to userInputArray.
