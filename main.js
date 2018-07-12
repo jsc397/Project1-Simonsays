@@ -17,3 +17,19 @@ let blueCircle = document.querySelector('.test3')
 
 // on click of this button, reset the score
 let resetButton = document.querySelector('.reset')
+
+// ask about transform-translate to shake the color buttons
+
+/* two options.... I can have a color array... that */
+
+
+let answerArray = "";
+let colorArray = ["red", "yellow", "green", "blue"]
+for (i = 0; i < colorArray.length; i++) {
+    answerArray += colorArray
+}
+
+// put the answers for the random array into answer array
+// then have another variable called userInput and store the user's clicked array into userInput array.
+// then check if answer array is equal to userInputArray.
+// If not,.....we'lll think about that one later

@@ -42,8 +42,6 @@ article {
     grid-column: 2;
     grid-row:1;
     margin: 0 auto;
-   
-
 }
 
 .test2 {
@@ -52,7 +50,6 @@ article {
     grid-column: 1;
     grid-row: 2;
     margin: 0 auto;
-
 }
 
 .test3 {
@@ -61,7 +58,6 @@ article {
     grid-column: 3;
     grid-row: 2;
     margin: 0 auto;
-
 }
 
 .test4 {
@@ -70,5 +66,4 @@ article {
     grid-column: 2;
     grid-row: 3;
     margin: 0 auto;
-
 }
