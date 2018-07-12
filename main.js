@@ -21,13 +21,18 @@ let resetButton = document.querySelector('.reset')
 // ask about transform-translate to shake the color buttons
 
 /* two options.... I can have a color array... that */
+// console.log(possibleColorArray)
 
 
-let answerArray = "";
-let colorArray = ["red", "yellow", "green", "blue"]
-for (i = 0; i < colorArray.length; i++) {
-    answerArray += colorArray
-}
+let answerArray = [];
+let possibleColorArray = ["red", "yellow", "green", "blue"];
+for (i = 0; i < possibleColorArray.length; i++) {
+    // var rand = myArray[Math.floor(Math.random() * myArray.length)];
+    answerArray += possibleColorArray[Math.floor(Math.random() * possibleColorArray.length )]
+    
+//    answerArray += possibleColorArray(Math.floor(Math.random() * possibleColorArray.length))
+   //return answerArray;
+};
 
 // put the answers for the random array into answer array
 // then have another variable called userInput and store the user's clicked array into userInput array.
