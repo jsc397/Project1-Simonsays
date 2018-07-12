@@ -1,9 +1,9 @@
 /* test colors for boxes to move positioning */
 /* first section */
 body {
-    background-image: url(https://media.giphy.com/media/3oz8xur099boo4N9aU/giphy.gif);
+    background-image: url("http://i46.photobucket.com/albums/f120/jchoi07/tessellation-patterns-cream.jpg");
     background-position: center;
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 .header {
@@ -42,33 +42,29 @@ article {
 
 }
 
-.test1 {
-    background-color:red;
-    border: 2px solid black;
+.red {
+    background-color:rgba(152, 156, 157, .8);
     grid-column: 2;
     grid-row:1;
     margin: 0 auto;
 }
 
-.test2 {
-    background-color:yellow;
-    border: 2px solid black;
+.yellow {
+    background-color:rgba(128, 147, 146,.8);
     grid-column: 1;
     grid-row: 2;
     margin: 0 auto;
 }
 
-.test3 {
-    background-color:green;
-    border: 2px solid black;
+.green {
+    background-color:rgba(21, 29, 52, .7);
     grid-column: 3;
     grid-row: 2;
     margin: 0 auto;
 }
 
-.test4 {
-    background-color:blue;
-    border: 2px solid black;
+.blue {
+    background-color:rgba(219, 213, 206,.8);
     grid-column: 2;
     grid-row: 3;
     margin: 0 auto;
