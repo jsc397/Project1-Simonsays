@@ -42,28 +42,28 @@ article {
 
 }
 
-.red {
+.gray{
     background-color:rgba(152, 156, 157, .8);
     grid-column: 2;
     grid-row:1;
     margin: 0 auto;
 }
 
-.yellow {
+.sgreen {
     background-color:rgba(128, 147, 146,.8);
     grid-column: 1;
     grid-row: 2;
     margin: 0 auto;
 }
 
-.green {
+.dblue {
     background-color:rgba(21, 29, 52, .7);
     grid-column: 3;
     grid-row: 2;
     margin: 0 auto;
 }
 
-.blue {
+.white {
     background-color:rgba(219, 213, 206,.8);
     grid-column: 2;
     grid-row: 3;
