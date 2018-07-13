@@ -2,19 +2,22 @@
 //  Variables
 var startButton = document.querySelector('#startbutton')
 // let grayCircle = document.querySelector('.gray')
-let seaGreenCircle = document.querySelector('.sgreen')
-let darkBlueCircle = document.querySelector('.dblue')
-let whiteCircle = document.querySelector('.white')
+let softGreenCircle = document.querySelector('#softgreen-circl')
+let darkBlueCircle = document.querySelector('#dark-blue-circle')
+let whiteCircle = document.querySelector('#white-circle')
 let resetButton = document.querySelector('.reset') 
 
-// click events
+/*
+Click Event test-notes
 // startButton.addEventListener('click', startGame)
 // on click, you need start game, which is generate random array, but also light up the buttons to show user
-// grayCircle.addEventListener('click', buttonClick)
-// seaGreenCircle.addEventListener('click', buttonClick)
-darkBlueCircle.addEventListener('click', function () {alert('darkBlue Button clicked') })
-// whiteCircle.addEventListener('click', buttonClick)
-resetButton.addEventListener('click', function () {alert('reset Button clicked') })
+grayCircle.addEventListener('click', buttonClick)
+seaGreenCircle.addEventListener('click', buttonClick)
+darkBlueCircle.addEventListener('click', function () {location.('darkBlue Button clicked') })
+whiteCircle.addEventListener('click', buttonClick)
+resetButton.addEventListener('click', function () {location.reload('Try Again!') })
+location.reload(forceGet)
+*/
 
 // functions
 // To start game, push Start button to generate random sequence and light up circles
@@ -26,29 +29,35 @@ function startGame () {
     answerArray.push(possibleColorArray[Math.floor(Math.random() * possibleColorArray.length)]
 )}
 }
-// // checking the gray
-// let grayCircle = document.querySelector('.test1')
-// grayCircle.addEventListener('click', buttonClick)
-// function checkUser () {
-//     if userClick[0] === answerArray[0] {
-//         // move on
+
+//  capturing user clicks
+//  let allCircles = document.querySelectorAll('.circle');
+//  console.log(allCircles)
+
+// Notes: NodeList.prototype.addEventListener = function (event_name, callback, useCapture) {
+//     for (var i = 0; i < this.length; i++) {
+//         this[i].addEventListener(event_name, callback, useCapture);
 //     }
-// }
+// };
 
-// // function for buttonClick
-// var userClickArry [];
-// function buttonClick () {
+document.querySelectorAll(".circle").addEventListener("click", function () {
+    alert('clicked');
+});
 
-// }
-/*
-// when you click the startButton it starts the game
-// COMPUTER DOES:
-/* Start game means, on click the circles I need write a code that:
+//  allCircles.addEventListener('click', buttonClick)
+//  function buttonClick() {
+//      if (/* user click */ === allCircles.NodeL
+     
+
+
+
+/* when you click the startButton it starts the game
+    COMPUTER DOES:
+    Start game means, on click the circles I need write a code that:
      1) Have the buttons flash a random sequence
-       -- and have something flash in JS */
-
-// Then have another variable called userInput and store the user's clicked array into userInput array.
-// then check if answer array is equal to userInputArray.
-// If not,.....we'lll think about that one later
-
-// on click of this button, reset the score
+       -- and have something flash in JS
+     2) Then have another variable called userInput and store the user's    clicked array into userInput array.
+       then check if answer array is equal to userInputArray.
+     3) If not, spit another random array
+     4) click of this button, reset the score
+     */
