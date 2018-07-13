@@ -12,7 +12,7 @@ let resetButton = document.querySelector('.reset')
 // on click, you need start game, which is generate random array, but also light up the buttons to show user
 // grayCircle.addEventListener('click', buttonClick)
 // seaGreenCircle.addEventListener('click', buttonClick)
-darkBlueCircle.addEventListener('click', function () {alert('reset Button clicked') })
+darkBlueCircle.addEventListener('click', function () {alert('darkBlue Button clicked') })
 // whiteCircle.addEventListener('click', buttonClick)
 resetButton.addEventListener('click', function () {alert('reset Button clicked') })
 

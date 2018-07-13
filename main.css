@@ -6,23 +6,54 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.header {
-    background-color: gray;
-    border: 2px solid black;
-    display: grid;
+
+h1 {
+    font-family: 'Monoton', cursive, Arial, Helvetica, sans-serif;
+    font-size: 6em;
+    color: rgba(21, 29, 52, .7);
 
 }
-article {
-    background-color: aquamarine;
+
+h2 {
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+    font-size: 3.25em;
+    color:rgba(96,96,96,0.8);
+
+}
+
+ h1, h2 { 
+    margin: 0;
+    padding: 0;
     border: 2px solid black;
+}
+
+ .header {
+    background-color:rgba(255,255,255,.1);
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    width: 60%;
+}
+p {
+    background-color: rgba(128, 147, 146,.4);
+    margin-top: 5px;
+    width: 59%;
+    padding: 10px;
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+    text-align: justify; 
 }
 
 /* possible nav bar with start and score */
+
 .button{
     display: inline-flex;
-    background-color: orange;
-    border: 2px solid black;
+    background-color: rgba(255,178,102,1);
+    padding: 3px;
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
 }
+
 /* game area with board and buttons */
 .canvas {
     display: grid;
