@@ -34,11 +34,11 @@ function startGame () {
 //  let allCircles = document.querySelectorAll('.circle');
 //  console.log(allCircles)
 
-// Notes: NodeList.prototype.addEventListener = function (event_name, callback, useCapture) {
-//     for (var i = 0; i < this.length; i++) {
-//         this[i].addEventListener(event_name, callback, useCapture);
-//     }
-// };
+ NodeList.prototype.addEventListener = function (class_name, callback) {
+    for (var i = 0; i < this.length; i++) {
+        this[i].addEventListener(class_name, callback);
+    }
+};
 
 document.querySelectorAll(".circle").addEventListener("click", function () {
     alert('clicked');
