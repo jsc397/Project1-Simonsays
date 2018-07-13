@@ -1,9 +1,7 @@
 
 //  Variables
 var startButton = document.querySelector('#startbutton')
-// let softGreenCircle = document.querySelector('#softgreen-circle')
-// let darkBlueCircle = document.querySelector('#dark-blue-circle')
-// let whiteCircle = document.querySelector('#white-circle')
+   
 let resetButton = document.querySelector('.reset') 
 
 /*
@@ -14,13 +12,15 @@ location.reload(forceGet)
 
 // functions
 // To start game, push Start button to generate random sequence and light up circles
-var answerArray = [];
+
 let possibleColorArray = ["gray", "sgreen", "dblue", "white"];
 
 function startGame () {
+    var answerArray = [];
   for (i = 0; i < possibleColorArray.length; i++) {
     answerArray.push(possibleColorArray[Math.floor(Math.random() * possibleColorArray.length)]
 )}
+console.log(answerArray)
 }
 
 //  capturing user clicks

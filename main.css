@@ -1,10 +1,24 @@
 /* test colors for boxes to move positioning */
 /* first section */
-body {
-    background-image: url("http://i46.photobucket.com/albums/f120/jchoi07/tessellation-patterns-cream.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+#bg {
+  position: absolute; 
+  left: 0px; 
+  top: 0px; 
+  z-index: -1;
+  width: 200%; 
+  height: 200%;
+}
+
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
 }
 
 h1 {
@@ -70,6 +84,11 @@ p {
     border-radius: 50%;
     align-content: center;
     justify-content: center;
+    z-index: -1; /* hide shadow behind image */
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);  
+    left: 15%; /* one half of the remaining 30% */
+    bottom: 0;
+    
 
 }
 
