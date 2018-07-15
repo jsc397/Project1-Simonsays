@@ -1,55 +1,43 @@
-/* test colors for boxes to move positioning */
-/* first section */
 
-#bg {
-  position: absolute; 
-  left: 0px; 
-  top: 0px; 
-  z-index: -1;
-  width: 200%; 
-  height: 200%;
+/* Background Image */
+
+html {
+    background: url(tessellation-patterns-creamSBB.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 
-#bg img {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
-}
-
+/* Header styling */
 h1 {
-    font-family: 'Monoton', cursive, Arial, Helvetica, sans-serif;
+    font-family: 'Monoton', Arial, Helvetica, sans-serif;
     font-size: 6em;
     color: rgba(21, 29, 52, .7);
-
 }
 
 h2 {
     font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
     font-size: 3.25em;
     color:rgba(96,96,96,0.8);
-
+    border-top: 5px solid black;
 }
 
  h1, h2 { 
     margin: 0;
     padding: 0;
-    border: 2px solid black;
 }
 
  .header {
     background-color:rgba(255,255,255,.1);
-    border: 2px solid black;
+    border: 5px solid black;
+    width: 60%;
+}
+
+/* Game explanation div */
+.paragraph {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0;
-    width: 60%;
 }
+
 p {
     background-color: rgba(128, 147, 146,.4);
     margin-top: 5px;
@@ -59,7 +47,7 @@ p {
     text-align: justify; 
 }
 
-/* possible nav bar with start and score */
+/* Start, Score, Reset Buttons */
 
 .button{
     display: inline-flex;
@@ -68,7 +56,7 @@ p {
     font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
 }
 
-/* game area with board and buttons */
+/* Canvas that holds the circles */
 .canvas {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -77,6 +65,8 @@ p {
     align-content: center;
     justify-content: center;
 }
+
+/* Circles styling */
 
 .circle{
     height: 200px;
