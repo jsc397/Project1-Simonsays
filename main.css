@@ -1,6 +1,5 @@
 
 /* Background Image */
-
 html {
     background: url(tessellation-patterns-creamSBB.jpg) no-repeat center center fixed;
     background-size: cover;
@@ -78,32 +77,30 @@ p {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);  
     left: 15%; /* one half of the remaining 30% */
     bottom: 0;
-    
-
 }
 
-.gray{
+#ctop {
     background-color:rgba(152, 156, 157, .8);
     grid-column: 2;
     grid-row:1;
     margin: 0 auto;
 }
 
-.sgreen {
+#cleft {
     background-color:rgba(128, 147, 146,.8);
     grid-column: 1;
     grid-row: 2;
     margin: 0 auto;
 }
 
-.dblue {
+#cright {
     background-color:rgba(21, 29, 52, .7);
     grid-column: 3;
     grid-row: 2;
     margin: 0 auto;
 }
 
-.white {
+#cbottom {
     background-color:rgba(219, 213, 206,.8);
     grid-column: 2;
     grid-row: 3;
