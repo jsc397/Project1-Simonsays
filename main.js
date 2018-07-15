@@ -18,29 +18,10 @@ console.log(answerArray)
 }
 
 //  capturing user clicks
-let circles = document.querySelectorAll('.circle')
-let cicleArray = Array.from(circles).forEach(addListener)
-// function addListener() {
 
-// }
+const ctop = document.querySelector('#ctop');
 
-// function eventListener {
-
-// }
-
-// Array.from(NodeList);
-// console.log(circles)
-
-// let myArray = Array.from(nl)
-//  NodeList.prototype.addEventListener = function (class_name, callback) {
-//     for (var i = 0; i < this.length; i++) {
-//         this[i].addEventListener(class_name, callback);
-//     }
-// };
-
-// document.querySelectorAll("circle").addEventListener("click", function () {
-//     alert('clicked');
-// });
-
-
+ctop.addEventListener('click', function () {
+    console.log("You clicked ctop");
+})
 
