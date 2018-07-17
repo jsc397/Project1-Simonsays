@@ -73,34 +73,33 @@ p {
     border-radius: 50%;
     align-content: center;
     justify-content: center;
-    z-index: -1; /* hide shadow behind image */
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);  
-    left: 15%; /* one half of the remaining 30% */
+    left: 15%; 
     bottom: 0;
 }
 
-#ctop {
+.gray {
     background-color:rgba(152, 156, 157, .8);
     grid-column: 2;
     grid-row:1;
     margin: 0 auto;
 }
 
-#cleft {
+.green {
     background-color:rgba(128, 147, 146,.8);
     grid-column: 1;
     grid-row: 2;
     margin: 0 auto;
 }
 
-#cright {
+.blue {
     background-color:rgba(21, 29, 52, .7);
     grid-column: 3;
     grid-row: 2;
     margin: 0 auto;
 }
 
-#cbottom {
+.white {
     background-color:rgba(219, 213, 206,.8);
     grid-column: 2;
     grid-row: 3;

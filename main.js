@@ -1,12 +1,12 @@
-
 //  Variables
-// let startButton = document.querySelector('#startbutton')
-// let resetButton = document.querySelector('.reset') 
-
-
-// functions
-// To start game, push Start button to generate random sequence
 let startButton = document.querySelector('#startbutton')
+let resetButton = document.querySelector('.reset')
+let topCircle = document.querySelector('#ctop') 
+let rightCircle = document.querySelector('#cright') 
+let bottomCircle = document.querySelector('#cbottom')
+let leftCircle = document.querySelector('#cleft') 
+
+// To start game, push Start button to generate random sequence
 let possibleColorArray = ["gray", "sgreen", "dblue", "white"];
 
 function startGame () {
@@ -18,10 +18,36 @@ console.log(answerArray)
 }
 
 //  capturing user clicks
+NodeList.prototype.addEventListener = function (class_name, callback) {
+  for (var i = 0; i < this.length; i++) {
+    this[i].addEventListener(class_name, callback);
+  }
+};
 
-const ctop = document.querySelector('#ctop');
+document.querySelectorAll(".circle").addEventListener("click", function () {
+  alert('clicked');
+});
 
-ctop.addEventListener('click', function () {
-    console.log("You clicked ctop");
-})
-
+/*
+Next steps pseudocode:
+Instead of alert('clicked') I will need to write code that registers which button was clicked
+if click == topCircle.value {
+  alert('top circle is clicked')
+} else if {
+  click == rightCircle.value {
+    alert('right circle is clicked')
+  } else if {
+    click == bottomCircle.value {
+      alert('bottom circle is clicked)
+    } else if {
+      click == leftCircle.value {
+        alert ('left circle is clicked')
+      }
+      else {
+        alert('nothing selected')
+      }
+    }
+  }
+}
+-- research if .value is the correct method to match the value of the string.
+*/
