@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,32 +9,39 @@
     <link href="https://fonts.googleapis.com/css?family=Monoton|Roboto+Condensed:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
+
 <body>
 
-<!-- Header div -->
-    <div class = "header">
+    <!-- Header div -->
+    <div class="header">
         <h1>SIMON</h1>
         <h2>A Colorful Game of Wits</h2>
     </div>
-<!-- Game Explanation div -->
-    <div class = "paragraph">
-    <p> 
-        Test your wits in a stress-free space with this classic memory game with a calming twist. Push to start and watch the circles light up. Once the light show dissipates, click the cirles in the exact order to move to the next round! Get to 100 points and win the game! Simple enough? Test your luck!</p>
-        </div>
-<!-- start button -->
-    <div class = "button start" id = "startbutton" onclick = "startGame()">Start</div>
-<!-- score button -->
-    <div class = "button score" id = "scoreButton">Score</div>
-<!-- Canvas that holds the circles -->
-    <div class ="canvas">
-        <div class ="circle gray" id ="ctop" ></div>
-        <div class="circle green" id ="cleft"></div>
-        <div class="circle blue" id ="cright"></div>
+    <!-- Game Explanation div -->
+    <div class="paragraph">
+        <p>
+            Test your wits in a stress-free space with this classic memory game with a calming twist. Push to start and watch the circles
+            light up. Once the light show dissipates, click the cirles in the exact order to move to the next round! Get
+            to 100 points and win the game! Simple enough? Test your luck!</p>
+    </div>
+    <!-- start button -->
+    <div class="button start" id="startbutton" onclick="startGame()">Start</div>
+    <!-- score button -->
+    <div class="button score" id="scoreButton">Score</div>
+    <!-- check answer button -->
+    <div class="button check" id="checkbutton">Check Answer</div>
+    <!-- Canvas that holds the circles -->
+    <div class="canvas">
+        <div class="circle gray" id="ctop"></div>
+        <div class="circle green" id="cleft"></div>
+        <div class="circle blue" id="cright"></div>
         <div class="circle white" id="cbottom"></div>
     </div>
-<!-- reset button -->
-    <div class = "button reset">Reset</div>
-<!-- script tag -->
+    <!-- reset button -->
+    <div class="button reset">Reset</div>
+
+    <!-- script tag -->
     <script src="main.js"></script>
 </body>
+
 </html>

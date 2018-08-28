@@ -6,17 +6,15 @@ let rightCircle = document.querySelector("#cright");
 let bottomCircle = document.querySelector("#cbottom");
 let leftCircle = document.querySelector("#cleft");
 let clicks = document.querySelectorAll("div.circle");
+let checkButton = document.querySelector("#checkbutton");
+
+let possibleColorArray = ["gray", "green", "blue", "white"];
 let userClicks = [];
+let answerArray = [];
 
 // To start game, push Start button to generate random sequence
-let possibleColorArray = [topCircle, rightCircle, bottomCircle, leftCircle];
-
-topCircle.addEventListener("click", function() {
-  captureClicks("gray");
-});
-
 function startGame() {
-  let answerArray = [];
+  // let answerArray = [];
   for (i = 0; i < possibleColorArray.length; i++) {
     answerArray.push(
       possibleColorArray[Math.floor(Math.random() * possibleColorArray.length)]
@@ -26,41 +24,34 @@ function startGame() {
   return answerArray;
 }
 
-//  capturing user clicks
-// need to know which one is clicked
+// let answerArray = randomArray;
+
+// Add event listeners for each colored circle
+topCircle.addEventListener("click", function() {
+  captureClicks("gray");
+});
+rightCircle.addEventListener("click", function() {
+  captureClicks("blue");
+});
+bottomCircle.addEventListener("click", function() {
+  captureClicks("white");
+});
+
+leftCircle.addEventListener("click", function() {
+  captureClicks("green");
+});
+//  capturing user clicks and push into empty user array
 function captureClicks(color) {
   userClicks.push(color);
   console.log(userClicks);
-
-  // use this logic for the other userclicks
 }
 
-//   let clicks = (document.querySelectorAll(".circle").onclick = function(e) {
-//     alert("click");
-//   });
-//   console.log(clicks);
-// }
-
-/*
-Next steps pseudocode:
-Instead of alert('clicked') I will need to write code that registers which button was clicked
-if click == topCircle.value {
-  alert('top circle is clicked')
-} else if {
-  click == rightCircle.value {
-    alert('right circle is clicked')
-  } else if {
-    click == bottomCircle.value {
-      alert('bottom circle is clicked)
-    } else if {
-      click == leftCircle.value {
-        alert ('left circle is clicked')
-      }
-      else {
-        alert('nothing selected')
-      }
-    }
+// Compare the user array with the answer array
+checkButton.addEventListener("click", compareAnswers);
+function compareAnswers() {
+  if (answerArray.length === userClicks.length) {
+    console.log("yes!!!");
+  } else {
+    console.log("noooooooooo!");
   }
 }
--- research if .value is the correct method to match the value of the string.
-*/
