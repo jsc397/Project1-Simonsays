@@ -1,32 +1,45 @@
 //  Variables
-let startButton = document.querySelector('#startbutton')
-let resetButton = document.querySelector('.reset')
-let topCircle = document.querySelector('#ctop') 
-let rightCircle = document.querySelector('#cright') 
-let bottomCircle = document.querySelector('#cbottom')
-let leftCircle = document.querySelector('#cleft') 
+let startButton = document.querySelector("#startbutton");
+let resetButton = document.querySelector(".reset");
+let topCircle = document.querySelector("#ctop");
+let rightCircle = document.querySelector("#cright");
+let bottomCircle = document.querySelector("#cbottom");
+let leftCircle = document.querySelector("#cleft");
+let clicks = document.querySelectorAll("div.circle");
+let userClicks = [];
 
 // To start game, push Start button to generate random sequence
-let possibleColorArray = ["gray", "sgreen", "dblue", "white"];
+let possibleColorArray = [topCircle, rightCircle, bottomCircle, leftCircle];
 
-function startGame () {
-    var answerArray = [];
+topCircle.addEventListener("click", function() {
+  captureClicks("gray");
+});
+
+function startGame() {
+  let answerArray = [];
   for (i = 0; i < possibleColorArray.length; i++) {
-    answerArray.push(possibleColorArray[Math.floor(Math.random() * possibleColorArray.length)]
-)}
-console.log(answerArray)
+    answerArray.push(
+      possibleColorArray[Math.floor(Math.random() * possibleColorArray.length)]
+    );
+  }
+  console.log(answerArray);
+  return answerArray;
 }
 
 //  capturing user clicks
-NodeList.prototype.addEventListener = function (class_name, callback) {
-  for (var i = 0; i < this.length; i++) {
-    this[i].addEventListener(class_name, callback);
-  }
-};
+// need to know which one is clicked
+function captureClicks(color) {
+  userClicks.push(color);
+  console.log(userClicks);
 
-document.querySelectorAll(".circle").addEventListener("click", function () {
-  alert('clicked');
-});
+  // use this logic for the other userclicks
+}
+
+//   let clicks = (document.querySelectorAll(".circle").onclick = function(e) {
+//     alert("click");
+//   });
+//   console.log(clicks);
+// }
 
 /*
 Next steps pseudocode:
