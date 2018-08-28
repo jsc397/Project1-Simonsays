@@ -1,13 +1,12 @@
 //  Variables
 let startButton = document.querySelector("#startbutton");
-let resetButton = document.querySelector(".reset");
+let resetButton = document.querySelector("#reset");
 let topCircle = document.querySelector("#ctop");
 let rightCircle = document.querySelector("#cright");
 let bottomCircle = document.querySelector("#cbottom");
 let leftCircle = document.querySelector("#cleft");
-// let clicks = document.querySelectorAll("div.circle");
+let clicks = document.querySelectorAll("div.circle");
 let checkButton = document.querySelector("#checkbutton");
-let resetButton = document.querySelector("#reset");
 
 let possibleColorArray = ["gray", "green", "blue", "white"];
 let userClicks = [];
