@@ -55,3 +55,4 @@ function compareAnswers() {
     console.log("noooooooooo!");
   }
 }
+// potentially look into .length
