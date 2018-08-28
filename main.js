@@ -8,11 +8,12 @@ let leftCircle = document.querySelector("#cleft");
 let clicks = document.querySelectorAll("div.circle");
 let checkButton = document.querySelector("#checkbutton");
 
+// Global variables
 let possibleColorArray = ["gray", "green", "blue", "white"];
 let userClicks = [];
 let answerArray = [];
 
-// To start game, push Start button to generate random sequence
+// To start game, push Start button and generate random sequence
 function startGame() {
   for (i = 0; i < possibleColorArray.length; i++) {
     answerArray.push(
@@ -20,10 +21,8 @@ function startGame() {
     );
   }
   console.log(answerArray);
-  return answerArray;
+  // animate(sequence);
 }
-
-// let answerArray = randomArray;
 
 // Add event listeners for each colored circle
 topCircle.addEventListener("click", function() {
@@ -39,7 +38,7 @@ bottomCircle.addEventListener("click", function() {
 leftCircle.addEventListener("click", function() {
   captureClicks("green");
 });
-//  capturing user clicks and push into empty user array
+// Capture user clicks and push clicks into empty userClick array
 function captureClicks(color) {
   userClicks.push(color);
   alert(userClicks);
@@ -61,4 +60,16 @@ function restart() {
   answerArray = [];
   userClicks = [];
   startGame();
+}
+//Lightup answerArray
+function animate(answerArray) {
+  var i = 0;
+  var interval = setInterval(function() {
+    // lightUp(answerArray[i])
+    console.log(answerArray[i]);
+    i++;
+    if (i >= answerArray.length) {
+      clearInterval(interval);
+    }
+  }, 1000);
 }
