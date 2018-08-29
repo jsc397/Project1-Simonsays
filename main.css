@@ -1,107 +1,116 @@
-
 /* Background Image */
 html {
-    background: url(tessellation-patterns-creamSBB.jpg) no-repeat center center fixed;
-    background-size: cover;
+  background: url(tessellation-patterns-creamSBB.jpg) no-repeat center center
+    fixed;
+  background-size: cover;
 }
 
 /* Header styling */
 h1 {
-    font-family: 'Monoton', Arial, Helvetica, sans-serif;
-    font-size: 6em;
-    color: rgba(21, 29, 52, .7);
+  font-family: "Monoton", Arial, Helvetica, sans-serif;
+  font-size: 6em;
+  color: rgba(21, 29, 52, 0.7);
 }
 
 h2 {
-    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
-    font-size: 3.25em;
-    color:rgba(96,96,96,0.8);
-    border-top: 5px solid black;
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  font-size: 3.25em;
+  color: rgba(96, 96, 96, 0.8);
+  border-top: 5px solid black;
 }
 
- h1, h2 { 
-    margin: 0;
-    padding: 0;
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
 }
 
- .header {
-    background-color:rgba(255,255,255,.1);
-    border: 5px solid black;
-    width: 60%;
+.header {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 5px solid black;
+  width: 60%;
 }
 
 /* Game explanation div */
 .paragraph {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 p {
-    background-color: rgba(128, 147, 146,.4);
-    margin-top: 5px;
-    width: 59%;
-    padding: 10px;
-    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
-    text-align: justify; 
+  background-color: rgba(128, 147, 146, 0.4);
+  margin-top: 5px;
+  width: 59%;
+  padding: 10px;
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  text-align: justify;
 }
 
 /* Start, Score, Reset Buttons */
 
-.button{
-    display: inline-flex;
-    background-color: rgba(255,178,102,1);
-    padding: 3px;
-    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+.button {
+  display: inline-flex;
+  background-color: rgba(255, 178, 102, 1);
+  padding: 3px;
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
 }
 
 /* Canvas that holds the circles */
 .canvas {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    margin: 10%;
-    align-content: center;
-    justify-content: center;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  margin: 10%;
+  align-content: center;
+  justify-content: center;
 }
 
 /* Circles styling */
 
-.circle{
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    align-content: center;
-    justify-content: center;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);  
-    left: 15%; 
-    bottom: 0;
+.circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  align-content: center;
+  justify-content: center;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  left: 15%;
+  bottom: 0;
 }
 
 .gray {
-    background-color:rgba(152, 156, 157, .8);
-    grid-column: 2;
-    grid-row:1;
-    margin: 0 auto;
+  background: rgb(152, 156, 157);
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0 auto;
+  opacity: 0.8;
 }
 
 .green {
-    background-color:rgba(128, 147, 146,.8);
-    grid-column: 1;
-    grid-row: 2;
-    margin: 0 auto;
+  background: rgb(128, 147, 146);
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0 auto;
+  opacity: 0.8;
 }
 
 .blue {
-    background-color:rgba(21, 29, 52, .7);
-    grid-column: 3;
-    grid-row: 2;
-    margin: 0 auto;
+  background: rgb(21, 29, 52);
+  grid-column: 3;
+  grid-row: 2;
+  margin: 0 auto;
+  opacity: 0.7;
 }
 
 .white {
-    background-color:rgba(219, 213, 206,.8);
-    grid-column: 2;
-    grid-row: 3;
-    margin: 0 auto;
+  background: rgb(219, 213, 206);
+  grid-column: 2;
+  grid-row: 3;
+  margin: 0 auto;
+  opacity: 0.7;
+}
+
+.lightUp {
+  opacity: 1;
 }

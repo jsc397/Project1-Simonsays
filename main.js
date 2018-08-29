@@ -5,7 +5,6 @@ let topCircle = document.querySelector("#ctop");
 let rightCircle = document.querySelector("#cright");
 let bottomCircle = document.querySelector("#cbottom");
 let leftCircle = document.querySelector("#cleft");
-let clicks = document.querySelectorAll("div.circle");
 let checkButton = document.querySelector("#checkbutton");
 
 // Global variables
@@ -20,23 +19,35 @@ function startGame() {
       possibleColorArray[Math.floor(Math.random() * possibleColorArray.length)]
     );
   }
+  var time = 0;
   console.log(answerArray);
-  // animate(sequence);
+  // for loop through evvery color in answerArray
+  answerArray.forEach(function(color) {
+    console.log(color);
+    time = time + 3000;
+    setTimeout(function() {
+      animate(color);
+    }, time);
+  });
 }
 
 // Add event listeners for each colored circle
 topCircle.addEventListener("click", function() {
   captureClicks("gray");
+  animate("gray");
 });
 rightCircle.addEventListener("click", function() {
   captureClicks("blue");
+  animate("blue");
 });
 bottomCircle.addEventListener("click", function() {
   captureClicks("white");
+  animate("white");
 });
 
 leftCircle.addEventListener("click", function() {
   captureClicks("green");
+  animate("green");
 });
 // Capture user clicks and push clicks into empty userClick array
 function captureClicks(color) {
@@ -62,14 +73,13 @@ function restart() {
   startGame();
 }
 //Lightup answerArray
-function animate(answerArray) {
-  var i = 0;
-  var interval = setInterval(function() {
-    // lightUp(answerArray[i])
-    console.log(answerArray[i]);
-    i++;
-    if (i >= answerArray.length) {
-      clearInterval(interval);
-    }
-  }, 1000);
+function animate(color) {
+  let chosenCircle = document.getElementsByClassName(color);
+
+  chosenCircle[0].classList.add("lightUp");
+  console.log(chosenCircle[0]);
+
+  setTimeout(function() {
+    chosenCircle[0].classList.remove("lightUp");
+  }, 2000);
 }
