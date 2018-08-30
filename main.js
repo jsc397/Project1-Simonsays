@@ -24,7 +24,7 @@ function startGame() {
   // for loop through evvery color in answerArray
   answerArray.forEach(function(color) {
     // console.log(color);
-    time = time + 1000;
+    time = time + 700;
     setTimeout(function() {
       animate(color);
     }, time);
@@ -60,19 +60,20 @@ checkButton.addEventListener("click", compareAnswers);
 function compareAnswers() {
   if (JSON.stringify(answerArray) === JSON.stringify(userClicks)) {
     alert("Correct");
-    restart();
+    reset();
+    startGame();
   } else {
     alert("Try Again!");
-    restart();
+    reset();
+    startGame();
   }
 }
 
 // Reset game to play again
-resetButton.addEventListener("click", restart);
-function restart() {
+resetButton.addEventListener("click", reset);
+function reset() {
   answerArray = [];
   userClicks = [];
-  startGame();
 }
 //Lightup answerArray
 function animate(color) {
@@ -81,5 +82,5 @@ function animate(color) {
   // console.log(chosenCircle[0]);
   setTimeout(function() {
     chosenCircle[0].classList.remove("lightUp");
-  }, 600);
+  }, 250);
 }
