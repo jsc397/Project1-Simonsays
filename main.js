@@ -20,11 +20,11 @@ function startGame() {
     );
   }
   var time = 0;
-  console.log(answerArray);
+  // console.log(answerArray);
   // for loop through evvery color in answerArray
   answerArray.forEach(function(color) {
-    console.log(color);
-    time = time + 3000;
+    // console.log(color);
+    time = time + 1000;
     setTimeout(function() {
       animate(color);
     }, time);
@@ -52,16 +52,18 @@ leftCircle.addEventListener("click", function() {
 // Capture user clicks and push clicks into empty userClick array
 function captureClicks(color) {
   userClicks.push(color);
-  alert(userClicks);
+  // alert(userClicks);
 }
 
 // Compare the user array with the answer array
 checkButton.addEventListener("click", compareAnswers);
 function compareAnswers() {
   if (JSON.stringify(answerArray) === JSON.stringify(userClicks)) {
-    alert("yes!!!");
+    alert("Correct");
+    restart();
   } else {
-    alert("noooooooooo!");
+    alert("Try Again!");
+    restart();
   }
 }
 
@@ -75,11 +77,9 @@ function restart() {
 //Lightup answerArray
 function animate(color) {
   let chosenCircle = document.getElementsByClassName(color);
-
   chosenCircle[0].classList.add("lightUp");
-  console.log(chosenCircle[0]);
-
+  // console.log(chosenCircle[0]);
   setTimeout(function() {
     chosenCircle[0].classList.remove("lightUp");
-  }, 2000);
+  }, 600);
 }

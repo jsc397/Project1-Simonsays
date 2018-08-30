@@ -112,5 +112,5 @@ p {
 }
 
 .lightUp {
-  opacity: 1;
+  background: rgba(205, 235, 249, 0.4);
 }
