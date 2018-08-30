@@ -12,13 +12,12 @@ let possibleColorArray = ["gray", "green", "blue", "white"];
 let userClicks = [];
 let answerArray = [];
 
-// To start game, push Start button and generate random sequence
-function startGame() {
-  for (i = 0; i < possibleColorArray.length; i++) {
-    answerArray.push(
-      possibleColorArray[Math.floor(Math.random() * possibleColorArray.length)]
-    );
-  }
+//adds 1 new answer to the answerArray
+function createAnswerArr() {
+  answerArray.push(
+    possibleColorArray[Math.floor(Math.random() * possibleColorArray.length)]
+  );
+
   var time = 0;
   console.log(answerArray);
   // for loop through evvery color in answerArray
@@ -31,24 +30,34 @@ function startGame() {
   });
 }
 
+// To start game, push Start button and generate random sequence
+function startGame() {
+  createAnswerArr();
+}
+
 // Add event listeners for each colored circle
 topCircle.addEventListener("click", function() {
   captureClicks("gray");
   animate("gray");
+  compareAnswers();
 });
 rightCircle.addEventListener("click", function() {
   captureClicks("blue");
   animate("blue");
+  compareAnswers();
 });
 bottomCircle.addEventListener("click", function() {
   captureClicks("white");
   animate("white");
+  compareAnswers();
 });
 
 leftCircle.addEventListener("click", function() {
   captureClicks("green");
   animate("green");
+  compareAnswers();
 });
+
 // Capture user clicks and push clicks into empty userClick array
 function captureClicks(color) {
   userClicks.push(color);
@@ -58,10 +67,16 @@ function captureClicks(color) {
 // Compare the user array with the answer array
 checkButton.addEventListener("click", compareAnswers);
 function compareAnswers() {
-  if (JSON.stringify(answerArray) === JSON.stringify(userClicks)) {
-    alert("yes!!!");
-  } else {
-    alert("noooooooooo!");
+  for (var i = 0; i < userClicks.length; i++) {
+    if (answerArray[i] !== userClicks[i]) {
+      alert("loser, Game will restart over.");
+      restart();
+      break;
+    }
+    if (answerArray.length - 1 == i && answerArray[i] == userClicks[i]) {
+      //add a new color to answer array
+      createAnswerArr();
+    }
   }
 }
 
@@ -70,7 +85,7 @@ resetButton.addEventListener("click", restart);
 function restart() {
   answerArray = [];
   userClicks = [];
-  startGame();
+  alert('Game restarted. Press "Start Game" to play again.');
 }
 //Lightup answerArray
 function animate(color) {
